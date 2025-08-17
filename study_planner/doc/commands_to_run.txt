@@ -1,0 +1,12 @@
+# to download all the liberies 
+pip install -r requirements.txt
+
+# to run app
+python aap.py
+
+#paste the location in browser
+http://127.0.0.1:5000
+
+#Api and modle
+Api_key=AIzaSyD2FUOv9FKMip-OiJJtBYr1USpjD3Hk0A4
+modle =gemini-2.0-flash
