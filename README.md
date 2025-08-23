@@ -1,4 +1,7 @@
 # AI-BASED-STUDY-PLANNER
+<html>
+<body>
+    <p>
 A smart Flask-based web application that generates personalized study plans using Google's Gemini AI. This tool helps students create optimized study schedules based on their preferences, goals, and learning styles.
 
 https://img.shields.io/badge/AI-Powered-blue?style=for-the-badge&logo=google
@@ -120,6 +123,8 @@ Open a pull request
 🙏 Acknowledgments
 Google Gemini AI for powering the study plan generation
 
-
+</p>
 <div align="center"> Made with ❤️ using Flask and Gemini AI </div>
 New chat
+</body>
+</html>
