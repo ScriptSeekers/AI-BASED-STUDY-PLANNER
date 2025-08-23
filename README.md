@@ -15,13 +15,11 @@
             --warning: #e74c3c;
             --text: #34495e;
         }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -29,8 +27,7 @@
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             padding: 20px;
         }
-        
-        .container {
+                .container {
             max-width: 1000px;
             margin: 0 auto;
             background: white;
@@ -38,103 +35,86 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
-        
-        header {
+                header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             color: white;
             padding: 40px 20px;
             text-align: center;
         }
-        
         h1 {
             font-size: 2.8rem;
             margin-bottom: 15px;
         }
-        
         .tagline {
             font-size: 1.2rem;
             opacity: 0.9;
         }
-        
         .badges {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin: 20px 0;
         }
-        
         .badge {
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: bold;
         }
-        
-        .badge-ai {
+                .badge-ai {
             background: var(--accent);
             color: white;
         }
-        
-        .badge-flask {
+                .badge-flask {
             background: var(--secondary);
             color: white;
         }
-        
-        .badge-mysql {
+                .badge-mysql {
             background: var(--primary);
             color: white;
         }
-        
-        section {
+                section {
             padding: 30px;
             border-bottom: 1px solid #eee;
         }
-        
-        h2 {
+                h2 {
             color: var(--primary);
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid var(--light);
         }
-        
-        h3 {
+                h3 {
             color: var(--dark);
             margin: 15px 0 10px;
         }
-        
-        .features-grid {
+                .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             margin: 20px 0;
         }
-        
-        .feature-card {
+                .feature-card {
             background: var(--light);
             padding: 20px;
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
-        
-        .feature-card:hover {
+                .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
-        .feature-icon {
+                .feature-icon {
             font-size: 2rem;
             margin-bottom: 15px;
             color: var(--primary);
         }
-        
-        .tech-stack {
+                .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin: 20px 0;
         }
-        
-        .tech-item {
+                .tech-item {
             background: var(--light);
             padding: 10px 15px;
             border-radius: 8px;
@@ -142,8 +122,7 @@
             align-items: center;
             gap: 10px;
         }
-        
-        .code-block {
+                .code-block {
             background: #2d3436;
             color: #dfe6e9;
             padding: 15px;
@@ -151,37 +130,31 @@
             overflow-x: auto;
             margin: 15px 0;
         }
-        
-        .command {
+                .command {
             color: #fd9644;
         }
-        
-        .structure {
+                .structure {
             background: var(--light);
             padding: 15px;
             border-radius: 8px;
             font-family: monospace;
             line-height: 1.8;
         }
-        
-        .folder {
+                .folder {
             color: var(--primary);
             font-weight: bold;
         }
-        
-        .file {
+                .file {
             color: var(--dark);
             margin-left: 20px;
         }
-        
-        .screenshot {
+                .screenshot {
             width: 100%;
             border-radius: 8px;
             margin: 15px 0;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
-        .placeholder {
+                .placeholder {
             background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
             height: 200px;
             border-radius: 8px;
@@ -191,14 +164,12 @@
             color: white;
             font-weight: bold;
         }
-        
-        .step {
+                .step {
             display: flex;
             margin-bottom: 20px;
             align-items: flex-start;
         }
-        
-        .step-number {
+                .step-number {
             background: var(--primary);
             color: white;
             width: 30px;
@@ -210,26 +181,22 @@
             margin-right: 15px;
             flex-shrink: 0;
         }
-        
-        .contributing {
+                .contributing {
             background: var(--light);
             padding: 20px;
             border-radius: 10px;
         }
-        
-        footer {
+                footer {
             text-align: center;
             padding: 30px;
             background: var(--dark);
             color: white;
         }
-        
-        @media (max-width: 768px) {
+                @media (max-width: 768px) {
             .features-grid {
                 grid-template-columns: 1fr;
             }
-            
-            h1 {
+                    h1 {
                 font-size: 2.2rem;
             }
         }
@@ -246,8 +213,7 @@
                 <span class="badge badge-mysql">MySQL 8.0</span>
             </div>
         </header>
-        
-        <section>
+                <section>
             <h2>✨ Features</h2>
             <div class="features-grid">
                 <div class="feature-card">
@@ -282,19 +248,15 @@
                 </div>
             </div>
         </section>
-        
-        <section>
+                <section>
             <h2>🚀 Quick Start</h2>
-            
-            <h3>Prerequisites</h3>
+                    <h3>Prerequisites</h3>
             <ul>
                 <li>Python 3.8+</li>
                 <li>WAMP Server (for MySQL database)</li>
                 <li>Google Gemini API key</li>
             </ul>
-            
-            <h3>Installation</h3>
-            
+                <h3>Installation</h3>        
             <div class="step">
                 <div class="step-number">1</div>
                 <div>
@@ -305,7 +267,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="step">
                 <div class="step-number">2</div>
                 <div>
@@ -316,7 +277,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="step">
                 <div class="step-number">3</div>
                 <div>
@@ -326,7 +286,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="step">
                 <div class="step-number">4</div>
                 <div>
@@ -339,7 +298,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="step">
                 <div class="step-number">5</div>
                 <div>
@@ -355,7 +313,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="step">
                 <div class="step-number">6</div>
                 <div>
@@ -367,7 +324,6 @@
                 </div>
             </div>
         </section>
-        
         <section>
             <h2>🗂️ Project Structure</h2>
             <div class="structure">
@@ -390,7 +346,6 @@
                 <div class="folder" style="margin-left: 40px;">images/</div>
             </div>
         </section>
-        
         <section>
             <h2>🛠️ Technology Stack</h2>
             <div class="tech-stack">
@@ -401,7 +356,6 @@
                 <div class="tech-item">🔒 Security: Werkzeug password hashing</div>
             </div>
         </section>
-        
         <section>
             <h2>📋 API Usage</h2>
             <p>The application integrates with Google's Gemini AI API to generate study plans:</p>
@@ -419,23 +373,17 @@
                 """<br>
             </div>
         </section>
-        
         <section>
             <h2>🎨 Screenshots</h2>
-            
             <h3>Login Page</h3>
-            <div class="placeholder">Login Page Screenshot</div>
-            
+            <div class="placeholder">Login Page Screenshot</div>    
             <h3>Dashboard</h3>
             <div class="placeholder">Dashboard Screenshot</div>
-            
             <h3>Study Plan Results</h3>
             <div class="placeholder">Study Plan Results Screenshot</div>
         </section>
-        
         <section>
             <h2>🔧 Configuration</h2>
-            
             <h3>Gemini API Setup</h3>
             <ol>
                 <li>Get your API key from <a href="https://makersuite.google.com/app/apikey">Google AI Studio</a></li>
@@ -445,7 +393,6 @@
                 GEMINI_API_KEY=your_actual_api_key_here
             </div>
         </section>
-        
         <section>
             <h2>🤝 Contributing</h2>
             <div class="contributing">
@@ -459,7 +406,6 @@
                 </ol>
             </div>
         </section>
-        
         <section>
             <h2>🙏 Acknowledgments</h2>
             <ul>
@@ -468,7 +414,6 @@
                 <li>Chart.js for beautiful data visualizations</li>
             </ul>
         </section>
-
         <footer>
             <p>Made with ❤️ using Flask and Gemini AI</p>
         </footer>
