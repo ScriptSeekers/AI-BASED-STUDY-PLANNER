@@ -2,54 +2,81 @@
 <html>
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="static/style.css">
-    <script src="static/script.js"></script>
-    <script>
-        document.querySelector('form').addEventListener('submit', function(e) {
-            const hours = document.querySelector('input[name="hours_per_day"]');
-                if (hours.value < 1 || hours.value > 24) {
-                    alert('Please enter valid study hours (1-24)');
-                    e.preventDefault();
-            }
-        });
-</script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1><b>Welcome to AI Study Planner</b></h1>
     <div class="container">
-    <form method="post">
-        <form method="post">
-            <div id="left">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br><br>
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age"><br><br>
-    <label for="subjects">Subjects:</label>
-    <input type="text" id="subjects" name="subjects"><br><br>
-    <label for="hours_per_day">Study Hours/Day:</label>
-    <input type="number" id="hours_per_day" name="hours_per_day"><br><br>
+        <h1><b>Welcome to AI Study Planner, {{ session.username }}!</b></h1>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <div class="nav-links">
+            <a href="{{ url_for('history') }}">View History</a> | 
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+        
+        <form method="post" onsubmit="return validateForm()">
+            <div class="form-columns">
+                <div class="form-column">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="10" max="100" required><br><br>
+                    
+                    <label for="subjects">Subjects (comma separated):</label>
+                    <input type="text" id="subjects" name="subjects" placeholder="e.g., Math, Science, History" required><br><br>
+                    
+                    <label for="hours_per_day">Study Hours/Day:</label>
+                    <input type="number" id="hours_per_day" name="hours_per_day" min="1" max="24" required><br><br>
+                </div>
+                
+                <div class="form-column">
+                    <label for="time_slots">Preferred Time Slots:</label>
+                    <input type="text" id="time_slots" name="time_slots" placeholder="e.g., 9-11 AM, 3-5 PM" required><br><br>
+                    
+                    <label for="short_term_goal">Short Term Goal:</label>
+                    <input type="text" id="short_term_goal" name="short_term_goal" required><br><br>
+                    
+                    <label for="long_term_goal">Long Term Goal:</label>
+                    <input type="text" id="long_term_goal" name="long_term_goal" required><br><br>
+                    
+                    <label for="study_style">Study Style:</label>
+                    <select id="study_style" name="study_style" required>
+                        <option value="Visual">Visual</option>
+                        <option value="Auditory">Auditory</option>
+                        <option value="Kinesthetic">Kinesthetic</option>
+                        <option value="Reading/Writing">Reading/Writing</option>
+                    </select><br><br>
+                </div>
+            </div>
+            
+            <button type="submit">Generate Study Plan</button>
+        </form>
     </div>
-    <div id="right">
-    <label for="time_slots">Preferred Time Slots:</label>
-    <input type="text" id="time_slots" name="time_slots"><br><br>
-    <label for="short_term_goal">Short Term Goal:</label>
-    <input type="text" id="short_term_goal" name="short_term_goal"><br><br>
-    <label for="long_term_goal">Long Term Goal:</label>
-    <input type="text" id="long_term_goal" name="long_term_goal"><br><br>
-    <label for="study_style">Study Style:</label>
-    <select id="study_style" name="study_style">
-        <option value="Visual">Visual</option>
-        <option value="Auditory">Auditory</option>
-        <option value="Kinesthetic">Kinesthetic</option>
-    </select><br><br>
-    </div>    
 
-        <button type="submit">Generate Study Plan</button>
-    </form>
-    </div>
-    <a href="{{ url_for('login') }}">Logout</a>
-    <footer class="footer">
-        <p>© 2025 Arpit Vishwakarma. All Rights Reserved.</p>
-    </footer>
+    <script>
+        function validateForm() {
+            const hours = document.getElementById('hours_per_day');
+            if (hours.value < 1 || hours.value > 24) {
+                alert('Please enter valid study hours (1-24)');
+                return false;
+            }
+            
+            const age = document.getElementById('age');
+            if (age.value < 10 || age.value > 100) {
+                alert('Please enter a valid age (10-100)');
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
 </body>
 </html>
